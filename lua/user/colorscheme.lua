@@ -1,20 +1,6 @@
--- local colorscheme = "darkplus"
-
--- local colorscheme = "tokyonight"
--- vim.cmd("hi normal guibg=none")
--- vim.g.tokyonight_transparent = true
--- vim.g.tokyonight_style = "night"
--- vim.g.tokyonight_sidebars = { "qf", "telescope", "terminal", "packer" }
--- vim.g.tokyonight_transparent_sidebar = true
--- vim.g.tokyonight_terminal_colors = true
--- vim.g.tokyonight_dark_float = false
-
--- Lua:
--- For dark theme (neovim's default)
--- vim.o.background = 'dark'
 local colorscheme = 'dark'
 
--- local c = require('vscode.colors')
+local c = require('vscode.colors')
 require('vscode').setup({
     -- Enable transparent background
     transparent = true,
@@ -31,11 +17,11 @@ require('vscode').setup({
     -- },
 
     -- Override highlight groups (see ./lua/vscode/theme.lua)
-    -- group_overrides = {
+    group_overrides = {
         -- this supports the same val table as vim.api.nvim_set_hl
         -- use colors from this colorscheme by requiring vscode.colors!
-        -- Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
-    -- }
+        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+    }
 })
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
