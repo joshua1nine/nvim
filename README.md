@@ -1,4 +1,5 @@
 # A Basic Stable IDE config for Neovim
+> Based on [LunarVim](https://github.com/LunarVim) repo [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
 > Why does this repo exist?
 
