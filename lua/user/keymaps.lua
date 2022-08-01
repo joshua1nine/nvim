@@ -42,7 +42,7 @@ keymap("n", "<leader>c", "<cmd>Bdelete<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 
 -- Source current filename
-keymap("n", "<leader>so", ":so<CR>")
+keymap("n", "<leader>x", ":so<CR>")
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
