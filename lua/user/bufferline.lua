@@ -9,8 +9,9 @@ bufferline.setup({
 		buffer_close_icon = "",
 		close_command = "Bdelete %d",
 		close_icon = "",
-    color_icons = true,
-		indicator_icon = " ",
+		color_icons = true,
+		indicator_icon = "",
+		separator_style = "thin",
 		left_trunc_marker = "",
 		modified_icon = "●",
 		offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
@@ -21,46 +22,115 @@ bufferline.setup({
 		diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
 		diagnostics_update_in_insert = true, -- updates buffer diagnostic highlight in real time
 	},
+	-- highlights = {
+	-- 	fill = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "StatusLineNC" },
+	-- 	},
+	-- 	background = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "StatusLine" },
+	-- 	},
+	-- 	buffer_visible = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "Normal" },
+	-- 	},
+	-- 	buffer_selected = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "Normal" },
+	-- 	},
+	-- 	separator = {
+	-- 		guifg = { attribute = "bg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "StatusLine" },
+	-- 	},
+	-- 	separator_selected = {
+	-- 		guifg = { attribute = "fg", highlight = "Special" },
+	-- 		guibg = { attribute = "bg", highlight = "Normal" },
+	-- 	},
+	-- 	separator_visible = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "StatusLineNC" },
+	-- 	},
+	-- 	close_button = {
+	-- 		guifg = { attribute = "fg", highlight = "Normal" },
+	-- 		guibg = { attribute = "bg", highlight = "StatusLine" },
+	-- 	},
+	-- 	close_button_selected = {
+	-- 		guifg = { attribute = "fg", highlight = "normal" },
+	-- 		guibg = { attribute = "bg", highlight = "normal" },
+	-- 	},
+	-- 	close_button_visible = {
+	-- 		guifg = { attribute = "fg", highlight = "normal" },
+	-- 		guibg = { attribute = "bg", highlight = "normal" },
+	-- 	},
+	-- },
 	highlights = {
 		fill = {
+			-- guifg = "#FFFFFF",
+			guibg = "#FFA500",
+			guifg = "red",
+			-- guifg = { attribute = "fg", highlight = "Normal" },
+			-- guibg = { attribute = "bg", highlight = "Normal" },
+		},
+		background = {
+			-- guibg = "red",
 			guifg = { attribute = "fg", highlight = "Normal" },
 			guibg = { attribute = "bg", highlight = "StatusLineNC" },
 		},
-		background = {
-			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "StatusLine" },
-		},
 		buffer_visible = {
+			guibg = "blue",
 			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "Normal" },
+			-- guibg = { attribute = "bg", highlight = "Normal" },
 		},
 		buffer_selected = {
+			-- guibg = "green",
 			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "Normal" },
-		},
-		separator = {
-			guifg = { attribute = "bg", highlight = "Normal" },
 			guibg = { attribute = "bg", highlight = "StatusLine" },
 		},
+		separator = {
+			-- guibg = "yellow",
+			guifg = { attribute = "fg", highlight = "Normal" },
+			guibg = { attribute = "bg", highlight = "StatusLineNC" },
+		},
 		separator_selected = {
-			guifg = { attribute = "fg", highlight = "Special" },
+			guifg = { attribute = "fg", highlight = "Normal" },
+
 			guibg = { attribute = "bg", highlight = "Normal" },
 		},
 		separator_visible = {
 			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "StatusLineNC" },
+			guibg = { attribute = "bg", highlight = "Normal" },
 		},
-		close_button = {
-			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "StatusLine" },
+		modified = {
+			guifg = "#FFFFFF",
+			guibg = "blue",
 		},
-		close_button_selected = {
-			guifg = { attribute = "fg", highlight = "normal" },
-			guibg = { attribute = "bg", highlight = "normal" },
-		},
-		close_button_visible = {
-			guifg = { attribute = "fg", highlight = "normal" },
-			guibg = { attribute = "bg", highlight = "normal" },
-		},
+		-- modified_visible = {
+		-- 	guifg = "<color-value-here>",
+		-- 	guibg = "<color-value-here>",
+		-- },
+		-- modified_selected = {
+		-- 	guifg = "<color-value-here>",
+		-- 	guibg = "<color-value-here>",
+		-- },
+		-- duplicate_selected = {
+		-- 	guifg = "<color-value-here>",
+		-- 	gui = "italic",
+		-- 	guibg = "<color-value-here>",
+		-- },
+		-- duplicate_visible = {
+		-- 	guifg = "<color-value-here>",
+		-- 	gui = "italic",
+		-- 	guibg = "<color-value-here>",
+		-- },
+		-- duplicate = {
+		-- 	guifg = "<color-value-here>",
+		-- 	gui = "italic",
+		-- 	guibg = "<color-value-here>",
+		-- },
+		-- indicator_selected = {
+		-- 	guifg = "<color-value-here>",
+		-- 	guibg = "<color-value-here>",
+		-- },
 	},
 })
