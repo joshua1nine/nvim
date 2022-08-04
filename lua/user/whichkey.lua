@@ -5,8 +5,8 @@ end
 
 whichkey.setup({
 	plugins = {
-		marks = true, -- shows a list of your marks on ' and `
-		registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+		marks = false, -- shows a list of your marks on ' and `
+		registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 		spelling = {
 			enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
 			suggestions = 20, -- how many suggestions should be shown in the list?
@@ -36,7 +36,7 @@ whichkey.setup({
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
 		separator = "➜", -- symbol used between a key and it's label
-		group = "+", -- symbol prepended to a group
+		group = "", -- symbol prepended to a group
 	},
 	popup_mappings = {
 		scroll_down = "<c-d>", -- binding to scroll down inside the popup
@@ -74,22 +74,8 @@ whichkey.register({
 		name = "Lsp",
 		f = { "Format File" },
 	},
-  g = {
-    name = "Git",
-    g = {"Lazy Git"}
-  },
   f = {
     name = "Search",
-    f = {"Files"},
-    t = {"Text"},
-    p = {"Projects"},
-    b = {"Buffers"}
   },
-	["/"] = "Toggle Comment",
-	e = "Toggle Explorer",
 	h = "which_key_ignore",
-	x = "Source Current Buffer",
-	w = "Save Buffer",
-  c = "Close Buffer",
-  q = "Close Term"
 }, { prefix = "<leader>" })

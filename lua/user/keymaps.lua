@@ -1,10 +1,8 @@
 -- Shorten function name
 local keymap = vim.keymap.set
--- Silent keymap option
-local opts = { silent = true }
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<Space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
 
 -- Modes
@@ -17,63 +15,51 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-h>", "<C-w>h", { desc = "Pane Navigation: Left", silent = true })
+keymap("n", "<C-j>", "<C-w>j", { desc = "Pane Navigation: Right", silent = true })
+keymap("n", "<C-k>", "<C-w>k", { desc = "Pane Navigation: Up", silent = true })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Down", silent = true })
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", { desc = "Next Buffer", silent = true })
+keymap("n", "<S-h>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true })
 
 -- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear highlights", silent = true })
 
--- Close buffers
-keymap("n", "<leader>c", "<cmd>Bdelete<CR>", opts)
+-- Close buffer
+keymap("n", "<leader>c", "<cmd>Bdelete<CR>", { desc = "Close Buffer", silent = true })
 
 -- Close pane
-keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>q", ":q<CR>", { desc = "Close Pane", silent = true })
 
 -- Source current filename
-keymap("n", "<leader>x", ":so<CR>")
+keymap("n", "<leader>x", ":so<CR>", { desc = "Source File"})
 
 -- Better paste
-keymap("v", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', { silent = true })
 
 -- Write Buffer
-keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>w", ":w<CR>", { desc = "Save Buffer", silent = true })
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", { silent = true })
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv", { silent = true })
+keymap("v", ">", ">gv", { silent = true })
 
 -- Plugins --
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n", "<leader>fd", ":Telescope diagnostics<CR>", opts)
-
--- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-
--- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Files", silent = true })
+keymap("n", "<leader>ft", ":Telescope live_grep<CR>", { desc = "Text", silent = true })
+keymap("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Projects", silent = true })
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers", silent = true })
+keymap("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Diagnostics", silent = true })
+keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc="Help", silent = true })
