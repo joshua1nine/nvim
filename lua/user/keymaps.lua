@@ -40,7 +40,7 @@ keymap("n", "<leader>x", ":so<CR>", { desc = "Source File"})
 keymap("v", "p", '"_dP', { silent = true })
 
 -- Write Buffer
-keymap("n", "<leader>w", ":w<CR>", { desc = "Save Buffer", silent = true })
+keymap("n", "<leader>s", ":w<CR>", { desc = "Save Buffer", silent = true })
 
 -- Insert --
 -- Press jk fast to enter
