@@ -60,7 +60,14 @@ lualine.setup({
 		section_separators = { left = "", right = "" },
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = {
+			{
+				function()
+					return " "
+				end,
+				padding = { left = 0, right = 0 }, -- We don't need space before this
+			},
+		},
 		lualine_b = { "branch" },
 		lualine_c = {},
 		lualine_x = {
@@ -79,12 +86,19 @@ lualine.setup({
 					TelescopePrompt = "",
 					packer = "Packer",
 					alpha = "Alpha",
-          NvimTree = ""
+					NvimTree = "",
 				}, -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
 			},
 		},
 		lualine_y = {},
-		lualine_z = { "progress" },
+		lualine_z = {
+			{
+				function()
+					return " "
+				end,
+				padding = { left = 0, right = 0 }, -- We don't need space before this
+			},
+		},
 	},
 	tabline = {},
 	extensions = {},
