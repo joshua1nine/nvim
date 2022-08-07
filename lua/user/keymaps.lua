@@ -36,6 +36,14 @@ keymap("n", "<leader>q", ":q<CR>", { desc = "Close Pane", silent = true })
 -- Source current filename
 keymap("n", "<leader>x", ":so<CR>", { desc = "Source File"})
 
+-- Add line in normal mode
+keymap("n", "<CR>", "o<ESC>")
+keymap("n", "<C-Enter>", "O<ESC>")
+
+-- Tab in normal mode
+keymap("n", "<Tab>", ">>")
+keymap("n", "<S-Tab>", "<<")
+
 -- Better paste
 keymap("v", "p", '"_dP', { silent = true })
 
