@@ -55,9 +55,11 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 	use("alvan/vim-closetag")
+	use("tpope/vim-surround")
 
 	-- Colorschemes
 	use("Mofiqul/vscode.nvim")
+  use "joshdick/onedark.vim"
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -76,7 +78,7 @@ return packer.startup(function(use)
 	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
-  use "aca/emmet-ls"
+	use("aca/emmet-ls")
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
