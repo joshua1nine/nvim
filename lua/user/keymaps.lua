@@ -53,6 +53,9 @@ keymap("v", ">", ">gv", { silent = true })
 
 -- Plugins --
 
+-- Git
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Lazy Git"})
+
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })
 
