@@ -13,7 +13,7 @@ require('vscode').setup({
 
     -- Override colors (see ./lua/vscode/colors.lua)
     -- color_overrides = {
-    --     vscComment = '#FFFFFF',
+       -- vscComment = '#FFFFFF',
     -- },
 
     -- Override highlight groups (see ./lua/vscode/theme.lua)
