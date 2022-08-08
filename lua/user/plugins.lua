@@ -59,7 +59,6 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("Mofiqul/vscode.nvim")
-  use "joshdick/onedark.vim"
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
