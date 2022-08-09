@@ -10,22 +10,24 @@ local c = {
 	red = "#f44747",
 	green = "#6A9955",
 	blue = "#0a7aca",
+	orange = "#CE9178",
 	lightblue = "#5CB6F8",
 	yellow = "#ffaf00",
 	pink = "#DDB6F2",
+	purple = "#C586C0",
 }
 
 local theme = {
 	normal = {
-		a = { fg = c.fg, bg = c.blue, gui = "bold" },
+		a = { fg = c.fg, bg = c.lightblue, gui = "bold" },
 		b = { fg = c.lightblue, bg = c.bg },
 		c = { fg = c.fg, bg = c.bg },
 		x = { fg = c.fg, bg = c.bg },
 	},
 
 	visual = {
-		a = { fg = c.fg, bg = c.yellow, gui = "bold" },
-		b = { fg = c.yellow, bg = c.bg },
+		a = { fg = c.fg, bg = c.orange, gui = "bold" },
+		b = { fg = c.orange, bg = c.bg },
 	},
 
 	inactive = {
@@ -47,8 +49,8 @@ local theme = {
 	},
 
 	command = {
-		a = { fg = c.fg, bg = c.pink, gui = "bold" },
-		b = { fg = c.pink, bg = c.bg },
+		a = { fg = c.fg, bg = c.purple, gui = "bold" },
+		b = { fg = c.purple, bg = c.bg },
 		c = { fg = c.fg, bg = c.bg },
 	},
 }
