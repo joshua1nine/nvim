@@ -49,11 +49,6 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*.lua", "*.js", "*.jsx", "*.ts", "*.tsx", "*.css", "*.md", "*.html" },
 	callback = function()
-  --   local buf = vim.api.nvim_get_current_buf()
-  --   local buf_path = vim.api.nvim_buf_get_name(buf)
-  --             if buf_path ~= "plugins.lua" then
-		-- 	return
-		-- end
-		vim.lsp.buf.formatting()
+		vim.lsp.buf.formatting_sync()
 	end,
 })
