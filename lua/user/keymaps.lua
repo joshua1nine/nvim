@@ -34,7 +34,7 @@ keymap("n", "<leader>c", "<cmd>Bdelete<CR>", { desc = "Close Buffer", silent = t
 keymap("n", "<leader>q", ":q<CR>", { desc = "Close Pane", silent = true })
 
 -- Source current filename
-keymap("n", "<leader>x", ":so<CR>", { desc = "Source File"})
+keymap("n", "<leader>x", ":so<CR>", { desc = "Source File" })
 
 -- Add line in normal mode
 keymap("n", "<CR>", "o<ESC>")
@@ -42,7 +42,7 @@ keymap("n", "<C-Enter>", "O<ESC>")
 
 -- Tab in normal mode
 keymap("n", "<Tab>", ">>")
-keymap("n", "<S-Tab>", "<<")
+keymap("n", "<Tab>", ">>")
 
 -- Better paste
 keymap("v", "p", '"_dP', { silent = true })
@@ -62,7 +62,7 @@ keymap("v", ">", ">gv", { silent = true })
 -- Plugins --
 
 -- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Lazy Git"})
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Lazy Git" })
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })
@@ -73,4 +73,4 @@ keymap("n", "<leader>ft", ":Telescope live_grep<CR>", { desc = "Text", silent = 
 keymap("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Projects", silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers", silent = true })
 keymap("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Diagnostics", silent = true })
-keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc="Help", silent = true })
+keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help", silent = true })
