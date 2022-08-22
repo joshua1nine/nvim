@@ -9,7 +9,7 @@ configs.setup({
 	highlight = {
 		enable = true, -- false will disable the whole extension
 		additional_vim_regex_highlighting = { "php" },
-		disable = { "vimwiki" }, -- list of language that will be disabled
+		disable = {}, -- list of language that will be disabled
 	},
 	autopairs = {
 		enable = true,
