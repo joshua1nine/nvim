@@ -17,6 +17,7 @@ require("illuminate").configure({
 		"fugitive",
 		"alpha",
 		"NvimTree",
+		"help",
 	},
 	-- filetypes_allowlist: filetypes to illuminate, this is overriden by filetypes_denylist
 	filetypes_allowlist = {},
