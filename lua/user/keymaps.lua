@@ -21,8 +21,8 @@ keymap("n", "<C-k>", "<C-w>k", { desc = "Pane Navigation: Up", silent = true })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Down", silent = true })
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", { desc = "Next Buffer", silent = true })
-keymap("n", "<S-h>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true })
+keymap("n", "<A-k>", ":bnext<CR>", { desc = "Next Buffer", silent = true })
+keymap("n", "<A-j>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true })
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear highlights", silent = true })
@@ -39,6 +39,10 @@ keymap("n", "<leader>x", ":so<CR>", { desc = "Source File" })
 -- Add line in normal mode
 keymap("n", "<CR>", "o<ESC>")
 keymap("n", "<C-Enter>", "O<ESC>")
+
+-- Navigate in line
+keymap("n", "<S-h>", "^", { desc = "Start of line", silent = true })
+keymap("n", "<S-l>", "$", { desc = "End of line", silent = true })
 
 -- Tab in normal mode
 keymap("n", "<Tab>", ">>")
@@ -60,9 +64,6 @@ keymap("v", "<", "<gv", { silent = true })
 keymap("v", ">", ">gv", { silent = true })
 
 -- Plugins --
-
--- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Lazy Git" })
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })

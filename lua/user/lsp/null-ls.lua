@@ -17,7 +17,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({
 			extra_filetypes = { "toml" },
-			extra_args = { "--single-quote", "--jsx-single-quote" },
+			extra_args = { "--single-quote", "--jsx-single-quote", "--tab-width 3" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,

@@ -15,6 +15,7 @@ local servers = {
 	"tailwindcss",
 	"intelephense",
 	"emmet_ls",
+	"csharp_ls",
 }
 
 lsp_installer.setup()
