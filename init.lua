@@ -12,7 +12,6 @@ require("user.nvim-tree")
 require("user.lualine")
 require("user.toggleterm")
 require("user.impatient")
-require("user.illuminate")
 require("user.alpha")
 require("user.lsp")
 --[[ require("user.whichkey") ]]
