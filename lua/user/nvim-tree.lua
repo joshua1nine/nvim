@@ -56,7 +56,7 @@ nvim_tree.setup({
 	filters = {
 		dotfiles = false,
 		custom = {},
-		exclude = {},
+		exclude = { ".env", ".vercel" },
 	},
 	actions = {
 		open_file = {
@@ -75,7 +75,6 @@ nvim_tree.setup({
 	},
 	view = {
 		width = 30,
-		height = 30,
 		side = "left",
 		mappings = {
 			list = {
