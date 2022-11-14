@@ -15,7 +15,7 @@ local servers = {
 	"tailwindcss",
 	"intelephense",
 	"emmet_ls",
-	"csharp_ls",
+	"omnisharp",
 }
 
 lsp_installer.setup()
@@ -46,6 +46,11 @@ for _, server in pairs(servers) do
 	if server == "intelephense" then
 		local php_opts = require("user.lsp.settings.intelephense")
 		opts = vim.tbl_deep_extend("force", php_opts, opts)
+	end
+
+	if server == "omnisharp" then
+		local omni_opts = require("user.lsp.settings.omnisharp")
+		opts = vim.tbl_deep_extend("force", omni_opts, opts)
 	end
 
 	lspconfig[server].setup(opts)
