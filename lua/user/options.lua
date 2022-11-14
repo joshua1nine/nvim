@@ -41,3 +41,5 @@ set.shortmess:append("c")
 set.whichwrap:append("<,>,[,],h,l")
 set.iskeyword:append("-")
 set.foldmethod = "manual"
+-- Colorscheme
+vim.cmd([[colorscheme darkplus]])

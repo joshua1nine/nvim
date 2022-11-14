@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	use("unblevable/quick-scope")
 
 	-- Colorschemes
-	use("Mofiqul/vscode.nvim")
+	use("martinsione/darkplus.nvim")
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -77,7 +77,7 @@ return packer.startup(function(use)
 	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	-- use({ "RRethy/vim-illuminate" })
-	-- use("aca/emmet-ls")
+	use("aca/emmet-ls")
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
@@ -88,7 +88,7 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter" })
 
 	-- Which Key
-	-- use("folke/which-key.nvim")
+	use("folke/which-key.nvim")
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
