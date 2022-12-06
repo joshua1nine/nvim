@@ -52,10 +52,8 @@ return packer.startup(function(use)
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "lewis6991/impatient.nvim" })
-	use({ "goolord/alpha-nvim" })
 	use("tpope/vim-surround")
 	use("norcalli/nvim-colorizer.lua")
-	use("unblevable/quick-scope")
 	use("RRethy/vim-illuminate")
 
 	-- Colorschemes
@@ -77,8 +75,6 @@ return packer.startup(function(use)
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-	use("aca/emmet-ls")
-	--[[ use("jlcrochet/vim-razor") ]]
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
@@ -93,11 +89,6 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
-
-	-- Dap
-	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-	use("Pocco81/DAPInstall.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
