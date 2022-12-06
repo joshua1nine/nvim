@@ -77,15 +77,12 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim" })
+	use({ "nvim-telescope/telescope.nvim", tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'}} })
 	use("BurntSushi/ripgrep")
 	use("nvim-telescope/telescope-fzf-native.nvim")
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter" })
-
-	-- Which Key
-	use("folke/which-key.nvim")
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
