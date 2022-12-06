@@ -5,7 +5,7 @@ vim.o.background = "dark"
 local c = require("vscode.colors")
 require("vscode").setup({
 	-- Enable transparent background
-	transparent = true,
+	transparent = false,
 
 	-- Enable italic comment
 	italic_comments = true,
@@ -15,7 +15,7 @@ require("vscode").setup({
 
 	-- Override colors (see ./lua/vscode/colors.lua)
 	color_overrides = {
-		vscLineNumber = "#FFFFFF",
+		vscLineNumber = "#3a3d41",
 	},
 
 	-- Override highlight groups (see ./lua/vscode/theme.lua)

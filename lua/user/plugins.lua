@@ -52,9 +52,10 @@ return packer.startup(function(use)
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "lewis6991/impatient.nvim" })
-	use("tpope/vim-surround")
-	use("norcalli/nvim-colorizer.lua")
-	use("RRethy/vim-illuminate")
+	use({ "tpope/vim-surround" })
+	use({ "norcalli/nvim-colorizer.lua" })
+	use({ "RRethy/vim-illuminate" })
+   use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
 	use({ "Mofiqul/vscode.nvim", commit = "4f790efe9442d267a1d4e1d62d2611f84b16efb7" })

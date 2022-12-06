@@ -24,6 +24,10 @@ keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Down", silent = true }
 keymap("n", "<A-k>", ":bnext<CR>", { desc = "Next Buffer", silent = true })
 keymap("n", "<A-j>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true })
 
+-- Move Cursor to center
+keymap("n", "<C-d>", "<C-d>zz", { silent = true })
+keymap("n", "<C-u>", "<C-u>zz", { silent = true })
+
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear highlights", silent = true })
 
@@ -36,27 +40,27 @@ keymap("n", "<leader>q", ":q<CR>", { desc = "Close Pane", silent = true })
 -- Source current filename
 keymap("n", "<leader>x", ":so<CR>", { desc = "Source File" })
 
+-- Write Buffer
+keymap("n", "<leader>s", ":w<CR>", { desc = "Save Buffer", silent = true })
+
 -- Add line in normal mode
 keymap("n", "<CR>", "o<ESC>")
 keymap("n", "<C-Enter>", "O<ESC>")
 
 -- Navigate in line
-keymap("n", "<S-h>", "^", { desc = "Start of line", silent = true })
+keymap("n", "<S-h>", "_", { desc = "Start of line", silent = true })
 keymap("n", "<S-l>", "$", { desc = "End of line", silent = true })
 
 -- Tab in normal mode
 keymap("n", "<Tab>", ">>")
-keymap("n", "<Tab>", ">>")
+keymap("n", "<S-Tab>", "<<")
 
 -- Better paste
 keymap("v", "p", '"_dP', { silent = true })
 
--- Write Buffer
-keymap("n", "<leader>s", ":w<CR>", { desc = "Save Buffer", silent = true })
-
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", { silent = true })
+--[[ keymap("i", "jk", "<ESC>", { silent = true }) ]]
 
 -- Visual --
 -- Stay in indent mode
