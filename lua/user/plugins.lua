@@ -55,10 +55,12 @@ return packer.startup(function(use)
 	use({ "tpope/vim-surround" })
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "RRethy/vim-illuminate" })
-   use({ "goolord/alpha-nvim" })
+	use({ "goolord/alpha-nvim" })
+	use({ "aca/emmet-ls" })
 
 	-- Colorschemes
-	use({ "Mofiqul/vscode.nvim", commit = "4f790efe9442d267a1d4e1d62d2611f84b16efb7" })
+	use({ "Mofiqul/vscode.nvim" })
+	use({ "olimorris/onedarkpro.nvim" })
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -76,9 +78,12 @@ return packer.startup(function(use)
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-
+	use({
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
+	}) -- adds code action overlay
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'}} })
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } })
 	use("BurntSushi/ripgrep")
 	use("nvim-telescope/telescope-fzf-native.nvim")
 
