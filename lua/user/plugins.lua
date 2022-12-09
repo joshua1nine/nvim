@@ -56,7 +56,8 @@ return packer.startup(function(use)
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "RRethy/vim-illuminate" })
 	use({ "goolord/alpha-nvim" })
-	use({ "aca/emmet-ls" })
+	use({ "ThePrimeagen/vim-be-good" })
+	use({ "ThePrimeagen/harpoon" })
 
 	-- Colorschemes
 	use({ "Mofiqul/vscode.nvim" })
@@ -82,6 +83,8 @@ return packer.startup(function(use)
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
 	}) -- adds code action overlay
+	use({ "aca/emmet-ls" })
+
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } })
 	use("BurntSushi/ripgrep")

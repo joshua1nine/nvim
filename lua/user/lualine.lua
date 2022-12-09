@@ -74,23 +74,49 @@ lualine.setup({
 		lualine_c = {},
 		lualine_x = {
 			{
-				"buffers",
-				show_filename_only = true, -- Shows shortened relative path when set to false.
-				hide_filename_extension = false, -- Hide filename extension when set to true.
-				show_modified_status = true, -- Shows indicator when the buffer is modified.
+				"filename",
+				file_status = true, -- Displays file status (readonly status, modified status)
+				newfile_status = false, -- Display new file status (new file means no write after created)
+				path = 0, -- 0: Just the filename
+				-- 1: Relative path
+				-- 2: Absolute path
+				-- 3: Absolute path, with tilde as the home directory
 
+				shorting_target = 40, -- Shortens path to leave 40 spaces in the window
+				-- for other components. (terrible name, any suggestions?)
 				symbols = {
-					modified = " ", -- Text to show when the buffer is modified
-					alternate_file = "", -- Text to show to identify the alternate file
-					directory = "", -- Text to show when the buffer is a directory
+					modified = " ", -- Text to show when the file is modified.
+					readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+					unnamed = "[No Name]", -- Text to show for unnamed buffers.
+					newfile = "[New]", -- Text to show for new created file before first writting
 				},
-				filetype_names = {
-					TelescopePrompt = "",
-					packer = "Packer",
-					alpha = "Alpha",
-					NvimTree = "",
-				}, -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
 			},
+			{
+				"filetype",
+				colored = true, -- Displays filetype icon in color if set to true
+				icon_only = true, -- Display only an icon for filetype
+				icon = { align = "right" }, -- Display filetype icon on the right hand side
+				-- icon =    {'X', align='right'}
+				-- Icon string ^ in table is ignored in filetype component
+			},
+			--[[ { ]]
+			--[[ 	"buffers", ]]
+			--[[ 	show_filename_only = true, -- Shows shortened relative path when set to false. ]]
+			--[[ 	hide_filename_extension = false, -- Hide filename extension when set to true. ]]
+			--[[ 	show_modified_status = true, -- Shows indicator when the buffer is modified. ]]
+			--[[]]
+			--[[ 	symbols = { ]]
+			--[[ 		modified = " ", -- Text to show when the buffer is modified ]]
+			--[[ 		alternate_file = "", -- Text to show to identify the alternate file ]]
+			--[[ 		directory = "", -- Text to show when the buffer is a directory ]]
+			--[[ 	}, ]]
+			--[[ 	filetype_names = { ]]
+			--[[ 		TelescopePrompt = "", ]]
+			--[[ 		packer = "Packer", ]]
+			--[[ 		alpha = "Alpha", ]]
+			--[[ 		NvimTree = "", ]]
+			--[[ 	}, -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } ) ]]
+			--[[ }, ]]
 		},
 		lualine_y = {},
 		lualine_z = {

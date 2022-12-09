@@ -16,13 +16,11 @@ vim.g.mapleader = " "
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", { desc = "Pane Navigation: Left", silent = true })
-keymap("n", "<C-j>", "<C-w>j", { desc = "Pane Navigation: Right", silent = true })
-keymap("n", "<C-k>", "<C-w>k", { desc = "Pane Navigation: Up", silent = true })
-keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Down", silent = true })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Right", silent = true })
 
 -- Navigate buffers
-keymap("n", "<A-k>", ":bnext<CR>", { desc = "Next Buffer", silent = true })
-keymap("n", "<A-j>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true })
+--[[ keymap("n", "<C-k>", ":bnext<CR>", { desc = "Next Buffer", silent = true }) ]]
+--[[ keymap("n", "<C-j>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true }) ]]
 
 -- Move Cursor to center
 keymap("n", "<C-d>", "<C-d>zz", { silent = true })
@@ -41,15 +39,11 @@ keymap("n", "<leader>q", ":q<CR>", { desc = "Close Pane", silent = true })
 keymap("n", "<leader>x", ":so<CR>", { desc = "Source File" })
 
 -- Write Buffer
-keymap("n", "<leader>s", ":w<CR>", { desc = "Save Buffer", silent = true })
+keymap("n", "<leader>w", ":w<CR>", { desc = "Save Buffer", silent = true })
 
 -- Add line in normal mode
 keymap("n", "<CR>", "o<ESC>")
 keymap("n", "<C-Enter>", "O<ESC>")
-
--- Navigate in line
-keymap("n", "<S-h>", "_", { desc = "Start of line", silent = true })
-keymap("n", "<S-l>", "$", { desc = "End of line", silent = true })
 
 -- Tab in normal mode
 keymap("n", "<Tab>", ">>")
@@ -59,8 +53,6 @@ keymap("n", "<S-Tab>", "<<")
 keymap("v", "p", '"_dP', { silent = true })
 
 -- Insert --
--- Press jk fast to enter
---[[ keymap("i", "jk", "<ESC>", { silent = true }) ]]
 
 -- Visual --
 -- Stay in indent mode
@@ -79,3 +71,20 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Projects", silent
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers", silent = true })
 keymap("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Diagnostics", silent = true })
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help", silent = true })
+
+-- Harpoon
+keymap(
+	"n",
+	"<leader>p",
+	":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+	{ desc = "Toggle Harpoon", silent = true }
+)
+-- comment
+keymap(
+	"n",
+	"<leader>a",
+	":lua require('harpoon.mark').add_file()<CR>",
+	{ desc = "Add file to Harpoon", silent = false }
+)
+keymap("n", "<C-k>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "Next Harpoon File", silent = true })
+keymap("n", "<C-j>", ":lua require('harpoon.ui').nav_prev()<CR>", { desc = "Previous Harpoon File", silent = true })
