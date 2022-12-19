@@ -47,7 +47,20 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 
 -- Format on Save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*.php", "*.lua", "*.js", "*.jsx", "*.cjs", "*.ts", "*.tsx", "*.css", "*.md", "*.html" },
+	pattern = {
+		"*.php",
+		"*.lua",
+		"*.js",
+		"*.jsx",
+		"*.cjs",
+		"*.mjs",
+		"*.ts",
+		"*.tsx",
+		"*.css",
+		"*.md",
+		"*.html",
+		"*.prisma",
+	},
 	callback = function()
 		vim.lsp.buf.format()
 	end,

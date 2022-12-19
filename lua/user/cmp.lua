@@ -126,3 +126,9 @@ cmp.setup({
 		ghost_text = false,
 	},
 })
+
+luasnip.snippets = {
+	all = {
+		luasnip.parser.parse_snippet("con", "-- console log"),
+	},
+}

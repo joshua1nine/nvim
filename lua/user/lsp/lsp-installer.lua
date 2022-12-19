@@ -15,6 +15,7 @@ local servers = {
 	"intelephense",
 	"emmet_ls",
 	"omnisharp",
+	"prismals",
 }
 
 lsp_installer.setup()
