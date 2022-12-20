@@ -26,6 +26,10 @@ keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Right", silent = true 
 keymap("n", "<C-d>", "<C-d>zz", { silent = true })
 keymap("n", "<C-u>", "<C-u>zz", { silent = true })
 
+-- Keep search terms in the center
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
+
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear highlights", silent = true })
 
@@ -41,6 +45,9 @@ keymap("n", "<leader>x", ":so<CR>", { desc = "Source File" })
 -- Write Buffer
 keymap("n", "<leader>w", ":w<CR>", { desc = "Save Buffer", silent = true })
 
+-- Replace word in file
+keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- Add line in normal mode
 keymap("n", "<CR>", "o<ESC>")
 keymap("n", "<C-Enter>", "O<ESC>")
@@ -52,7 +59,9 @@ keymap("n", "<S-Tab>", "<<")
 -- Better paste
 keymap("v", "p", '"_dP', { silent = true })
 
--- Insert --
+-- Move while highlighted
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+keymap("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Visual --
 -- Stay in indent mode
