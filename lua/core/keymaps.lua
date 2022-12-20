@@ -1,3 +1,7 @@
+-- [[ Basic Keymaps ]]
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 -- Shorten function name
 local keymap = vim.keymap.set
 
@@ -17,10 +21,6 @@ vim.g.mapleader = " "
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", { desc = "Pane Navigation: Left", silent = true })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Pane Navigation: Right", silent = true })
-
--- Navigate buffers
---[[ keymap("n", "<C-k>", ":bnext<CR>", { desc = "Next Buffer", silent = true }) ]]
---[[ keymap("n", "<C-j>", ":bprevious<CR>", { desc = "Prev Buffer", silent = true }) ]]
 
 -- Move Cursor to center
 keymap("n", "<C-d>", "<C-d>zz", { silent = true })
@@ -58,33 +58,3 @@ keymap("v", "p", '"_dP', { silent = true })
 -- Stay in indent mode
 keymap("v", "<", "<gv", { silent = true })
 keymap("v", ">", ">gv", { silent = true })
-
--- Plugins --
-
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })
-
--- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Files", silent = true })
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", { desc = "Text", silent = true })
-keymap("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Projects", silent = true })
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers", silent = true })
-keymap("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Diagnostics", silent = true })
-keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help", silent = true })
-
--- Harpoon
-keymap(
-	"n",
-	"<leader>p",
-	":lua require('harpoon.ui').toggle_quick_menu()<CR>",
-	{ desc = "Toggle Harpoon", silent = true }
-)
--- comment
-keymap(
-	"n",
-	"<leader>a",
-	":lua require('harpoon.mark').add_file()<CR>",
-	{ desc = "Add file to Harpoon", silent = false }
-)
-keymap("n", "<C-k>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "Next Harpoon File", silent = true })
-keymap("n", "<C-j>", ":lua require('harpoon.ui').nav_prev()<CR>", { desc = "Previous Harpoon File", silent = true })

@@ -85,3 +85,4 @@ nvim_tree.setup({
 		},
 	},
 })
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File Explorer", silent = true })

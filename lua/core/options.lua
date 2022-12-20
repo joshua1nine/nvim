@@ -1,8 +1,12 @@
+-- [[ Setting options ]]
+-- See `:help vim.o`
+
 local set = vim.opt
 set.backup = false -- creates a backup file
+vim.o.breakindent = true
 set.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 set.cmdheight = 1 -- more space in the neovim command line for displaying messages
-set.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 set.conceallevel = 0 -- so that `` is visible in markdown files
 set.fileencoding = "utf-8" -- the encoding written to a file
 set.hlsearch = false -- highlight all matches on previous search pattern
@@ -19,7 +23,7 @@ set.swapfile = false -- creates a swapfile
 set.termguicolors = true -- set term gui colors (most terminals support this)
 set.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
 set.undofile = true -- enable persistent undo
-set.updatetime = 300 -- faster completion (4000ms default)
+set.updatetime = 250 -- faster completion (4000ms default)
 set.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 set.expandtab = true -- convert tabs to spaces
 set.shiftwidth = 3 -- the number of spaces inserted for each indentation
