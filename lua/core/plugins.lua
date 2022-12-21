@@ -30,6 +30,9 @@ require('packer').startup(function(use)
   use { "ThePrimeagen/harpoon" }
   use { "lewis6991/impatient.nvim" } -- Speed up loading Lua modules in Neovim to improve startup time
 
+  -- Toggle Term
+  use { "akinsho/toggleterm.nvim", tag = '*' }
+
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
