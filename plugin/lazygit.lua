@@ -53,7 +53,7 @@ local toggle_terminal = function()
 				state.floating.buf,
 				"t",
 				"<Esc><Esc>",
-				"<C-\\><C-n><cmd>q<cr>",
+				"<leader>lg",
 				{ desc = "Exit terminal mode" }
 			)
 
