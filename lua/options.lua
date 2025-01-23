@@ -28,7 +28,12 @@ vim.o.spell = true
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = "unnamedplus"
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
+
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = false
 
 -- Scroll towards the end of the file
 vim.o.scrolloff = 8

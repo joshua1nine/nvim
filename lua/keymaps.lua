@@ -12,7 +12,7 @@ map("n", "<space>x", ":.lua<CR>", { desc = "Execute current line" })
 map("v", "<space>x", ":lua<CR>", { desc = "Execute selection" })
 
 -- Save file
-map("n", "<space>w", "<cmd>w<CR>", { desc = "Save file"})
+map("n", "<space>w", "<cmd>w<CR>", { desc = "Save file" })
 
 -- Move between windows
 map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
@@ -21,7 +21,7 @@ map("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
 map("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
 map("n", "<C-q>", "<C-w>q", { desc = "Close focused window" })
 
--- Keep cursor in the middle when jumping arround
+-- Keep cursor in the middle when jumping around
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
@@ -29,6 +29,10 @@ map({ "n", "v" }, "<S-j>", "8j")
 map({ "n", "v" }, "<S-k>", "8k")
 map({ "n", "v" }, "<S-h>", "^")
 map({ "n", "v" }, "<S-l>", "$")
+
+-- Remap for dealing with word wrap
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Keep cursor in the middle when searching
 map("n", "n", "nzzzv")
@@ -65,3 +69,5 @@ map("n", "Q", "<nop>")
 
 -- Omni Dev Sync
 map("n", "<leader>od", "<cmd>!omni-sync-dev<cr>")
+
+map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
