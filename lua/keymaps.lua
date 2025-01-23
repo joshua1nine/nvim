@@ -1,5 +1,5 @@
 local map = function(mode, keys, func, desc)
-  vim.keymap.set(mode, keys, func, desc)
+   vim.keymap.set(mode, keys, func, desc)
 end
 
 -- Source file and re-execute it
@@ -51,8 +51,11 @@ map("n", "<leader>rl", ":s///g<Left><Left><Left>", { desc = "Replace word in lin
 map("n", "<leader>rc", ":s///gc<Left><Left><Left>", { desc = "Replace word in line with confirmation" })
 
 -- Navigate buffers
--- map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
--- map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
+map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
+map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
+
+map("n", "<leader>cp", ":cprev<CR>", { desc = "Previous buffer" })
+map("n", "<leader>cn", ":cnext<CR>", { desc = "Next buffer" })
 
 -- Quicker Indentation
 map("n", "<Tab>", ">>")
@@ -67,7 +70,5 @@ map("v", "<S-Tab>", "<gv")
 -- Don't ever press capital Q! Honestly it's the worst place in the universe
 map("n", "Q", "<nop>")
 
--- Omni Dev Sync
--- map("n", "<leader>od", "<cmd>!omni-sync-dev<cr>")
 
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })

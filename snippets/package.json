@@ -11,10 +11,6 @@
                "typescript"
             ],
             "path": "./javascript.json"
-         },
-         {
-            "language": "all",
-            "path": "./allFiletypes.json"
          }
       ]
    },
