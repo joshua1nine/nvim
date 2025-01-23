@@ -68,6 +68,6 @@ map("v", "<S-Tab>", "<gv")
 map("n", "Q", "<nop>")
 
 -- Omni Dev Sync
-map("n", "<leader>od", "<cmd>!omni-sync-dev<cr>")
+-- map("n", "<leader>od", "<cmd>!omni-sync-dev<cr>")
 
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
