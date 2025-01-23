@@ -1,0 +1,43 @@
+{
+	"Dump JSON": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "dump",
+		"body": [
+			"<pre>{JSON.stringify(${0:object}, undefined, ' ')}</pre>"
+		],
+		"description": "Dumps Object in to browser"
+	},
+	"Print to console": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "lg",
+		"body": [
+			"console.log($0);"
+		],
+		"description": "Log output to console"
+	},
+	"Placeholder Image": {
+		"prefix": "pi",
+		"body": "<img src='https://via.placeholder.com/$1' alt='placeholder image'>"
+	},
+	"Array Map": {
+		"prefix": "arrmap",
+		"body": [
+			"${1:items}?.map((${2:item}, index) => {",
+			"  return ($0)",
+			"})"
+		]
+	},
+	"Astro Component Types Boilerplate": {
+		"prefix": "ct",
+		"body": [
+			"type ComponentProps = HTMLAttributes<'${1}'>",
+			"",
+			"type CustomProps = {${2}}",
+			"",
+			"type Props = Omit<ComponentProps, '${3}'> & CustomProps",
+			"",
+			"const { ...attrs } = Astro.props"
+		],
+		"description": "'Component Types Boilerplate"
+	}
+}
