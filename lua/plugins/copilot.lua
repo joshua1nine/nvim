@@ -1,10 +1,11 @@
 return {
-  "github/copilot.vim",
-  enabled = false,
-  config = function()
-    vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>", { desc = "Disable Copilot" })
-    vim.keymap.set("n", "<leader>ce", "<cmd>Copilot enable<CR>", { desc = "Enable Copilot" })
-    vim.keymap.set("n", "<leader>cp", "<cmd>Copilot panel<CR>", { desc = "Copilot Panel" })
-    vim.keymap.set("n", "<leader>cs", "<cmd>Copilot status<CR>", { desc = "Copilot Panel" })
-  end,
+   "github/copilot.vim",
+   enabled = false,
+   opts = {},
+   keys = {
+      { "<leader>cd", "<cmd>Copilot disable<CR>", "n", desc = "Disable Copilot" },
+      { "<leader>ce", "<cmd>Copilot enable<CR>", "n", desc = "Enable Copilot" },
+      { "<leader>cp", "<cmd>Copilot panel<CR>", "n", desc = "Copilot Panel" },
+      { "<leader>cs", "<cmd>Copilot status<CR>", "n", desc = "Copilot Status" },
+   },
 }

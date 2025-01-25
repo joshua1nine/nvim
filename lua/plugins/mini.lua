@@ -13,7 +13,7 @@ return {
       require('mini.bracketed').setup()
       require('mini.starter').setup()
       require('mini.comment').setup()
-      require('mini.tabline').setup()
+      -- require('mini.tabline').setup()
     end
   }
 }
