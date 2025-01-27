@@ -6,6 +6,9 @@ return {
 			require("oil").setup({
             view_options = {
                show_hidden = true
+            },
+            float = {
+               preview_split = "right"
             }
 			})
 			vim.keymap.set("n", "<leader>e", require("oil").toggle_float, { desc = "Open parent directory" })
