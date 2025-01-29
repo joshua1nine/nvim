@@ -77,6 +77,11 @@ return {
 
                map("gh", vim.lsp.buf.hover, "[H]over")
 
+               map("<leader>dn", vim.diagnostic.goto_next, "Go to next diagnostic")
+               map("<leader>dp", vim.diagnostic.goto_prev, "Go to prev diagnostic")
+               map("<leader>de", vim.diagnostic.open_float, "Open diagnostic float")
+               map("<leader>dq", vim.diagnostic.setloclist, "Go to prev diagnostic")
+
                -- Format Document
                map("<leader>f", vim.lsp.buf.format, "[f]ormat")
 
