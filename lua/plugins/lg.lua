@@ -1,6 +1,7 @@
 return {
 	{
 		"joshua1nine/lg.nvim",
+      enabled = false,
 		opts = {
 			winconfig = {
 				border = "rounded",
