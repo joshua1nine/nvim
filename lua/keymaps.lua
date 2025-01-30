@@ -67,6 +67,13 @@ map("v", "<S-Tab>", "<gv")
 -- File swapping
 -- map("n", "<C-p>", "<C-^>", { desc = "Swap between last two files" })
 
+-- Tab navigation
+map("n", "<leader>to", "<cmd>tabnew<CR>", {desc = "Open new tab"})
+map("n", "<leader>tx", "<cmd>tabclose<CR>", {desc = "Close current tab"})
+map("n", "<leader>tn", "<cmd>tabn<CR>", {desc = "Go to next tab"})
+map("n", "<leader>tp", "<cmd>tabp<CR>", {desc = "Go to prev tab"})
+map("n", "<leader>tf", "<cmd>tabnew %<CR>", {desc = "Open current buffer in new tab"})
+
 -- Don't ever press capital Q! Honestly it's the worst place in the universe
 map("n", "Q", "<nop>")
 
