@@ -22,11 +22,16 @@ return {
             api.tree.close()
          end
 
-			-- custom mappings
-			vim.keymap.set("n", "l", openShut, opts("Open File") )
-			vim.keymap.set("n", "<CR>", openShut, opts("Open File") )
-			vim.keymap.set("n", "o", openShut, opts("Open File") )
+         local map = vim.keymap.set
 
+			-- custom mappings
+			map("n", "l", api.node.open.edit, opts("Open File") )
+			map("n", "<CR>", openShut, opts("Open File") )
+			map("n", "o", openShut, opts("Open File") )
+			map("n", "h", api.node.navigate.parent_close, opts("Close Dir") )
+			map("n", "v", api.node.open.vertical, opts("Open Vertical Split") )
+			map("n", "t", api.node.open.tab, opts("Open in new Tab") )
+			--
 		end
 
 		nvimtree.setup({
