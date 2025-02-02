@@ -16,7 +16,7 @@ return {
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
-				blade = { "blade-formatter" },
+				blade = { "blade-formatter", "rustywind" },
 			},
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
