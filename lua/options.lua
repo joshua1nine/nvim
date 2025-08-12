@@ -60,3 +60,5 @@ vim.o.completeopt = "menuone,noselect,preview"
 
 -- You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.winborder = 'rounded'
