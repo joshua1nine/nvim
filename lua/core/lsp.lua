@@ -6,9 +6,7 @@
 -- This actually just enables the lsp servers.
 -- The configuration is found in the lsp folder inside the nvim config folder,
 -- so in ~.config/lsp/lua_ls.lua for lua_ls, for example.
-vim.lsp.enable('lua_ls')
-vim.lsp.enable('ts_ls')
-vim.lsp.enable('tailwindcss')
+vim.lsp.enable({'lua_ls', 'ts_ls', 'tailwindcss'})
 
 vim.api.nvim_create_autocmd('LspAttach', {
    callback = function(ev)
@@ -143,6 +141,10 @@ vim.diagnostic.config({
       -- Only show virtual line diagnostics for the current cursor line
       current_line = true,
    },
+   float = {
+      source = true,
+      border = 'rounded'
+   }
 })
 
 
